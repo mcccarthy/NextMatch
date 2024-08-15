@@ -5,8 +5,8 @@ import { ReactNode } from 'react';
 import TopNav from './components/navbar/TopNav';
 
 export const metadata: Metadata = {
-  title: 'NextMatch',
-  description: 'NextMatch is a simple app to manage your matches'
+  title: 'DatePulse',
+  description: 'DatePulse is a simple app to manage your matches'
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Providers>
           <TopNav />
-          {children}
+          <main className='container mx-auto p-10'>{children}</main>
         </Providers>
       </body>
     </html>
