@@ -1,6 +1,6 @@
 'use client';
 
-import { RegisterSchema, registerSchema } from '@/lib/schemas/registerSchema';
+import { RegisterSchema } from '@/lib/schemas/registerSchema'; // Import the schema with the correct name
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Card, CardHeader, CardBody, Button, Input } from '@nextui-org/react';
 
@@ -14,7 +14,7 @@ export default function RegisterForm() {
         handleSubmit,
         formState: { errors, isValid }
     } = useForm<RegisterSchema>({
-        resolver: zodResolver(registerSchema),
+        resolver: zodResolver(RegisterSchema), // Use RegisterSchema here
         mode: 'onTouched'
     });
 
